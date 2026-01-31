@@ -1,0 +1,30 @@
+:root {
+--primary-bg: #f1e5d9;
+--secondary-bg: #fff;
+--text: #222;
+--focus: #d7a973;
+--cta-bg: #35312f;
+--cta-color: #fff;
+--gutter: 1rem;
+--border-radius: 0.50rem;
+--max-width: 1440px;
+--font-family: 'Arial', sans-serif;
+--font-size-xs: 1rem;
+--font-size-md: 1.125rem;
+--font-size-lg: 1.25rem;
+}
+
+body {
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--primary-bg);
+    margin: 0;
+    line-height: 1.6;
+}
+
+#page-header {
+  background: var(--primary-bg);
+  border-bottom: 1px solid #e5d8c6;
+}
