@@ -80,3 +80,36 @@ body {
     color: var(--accent);
     outline: 4px solid var(--accent);
 }
+#geschichte {
+  padding: 2.5rem 1rem;
+  background: var(--primary-bg);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  }
+  #geschichte > header {
+  margin-bottom: 1rem;
+  }
+#geschichte h2 {
+  font-size: 1.6rem;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: var(--gutter);
+}
+.story-text {
+  font-size: var(--font-size-md);
+  background: var(--primary-bg);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  }
+  .story-img img {
+  width: var(--max-width);
+  border-radius: var(--border-radius);
+  background: var(--primary-bg);
+  object-fit: cover;
+  min-height: 150px;
+}
