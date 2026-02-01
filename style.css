@@ -243,3 +243,73 @@ body {
   border-radius: var(--border-radius);
   margin-top: 0.2em;
 }
+#naechste-schritte {
+  padding: 2rem 1rem;
+  background: var(--primary-bg);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+#naechste-schritte header {
+  margin-bottom: 1rem;
+}
+#naechste-schritte h2 {
+  font-size: 1.3rem;
+  color: var(--text);
+}
+.bildtext-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: var(--gutter);
+}
+.bildtext-img img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+  min-height: 120px;
+}
+.bildtext-text {
+  font-size: var(--font-size-md);
+  background: var(--secondary-bg);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+#kontakt {
+  padding: 2rem 1rem;
+  background: var(--primary-bg);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+#kontakt header {
+  margin-bottom: 1rem;
+}
+.contact-list {
+  display: flex;
+  gap: var(--gutter);
+  list-style: none;
+  padding: 0;
+  align-items: center;
+}
+
+#footer {
+  background: var(--secondary-bg);
+  padding: 1.2em 1em;
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--border-color);
+}
+.to-top-link {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  background: var(--cta-bg);
+  color: var(--text);
+  font-size: 2rem;
+  padding: 0.5em 0.7em;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  z-index: 100;
+  box-shadow: 0 2px 6px var(--border-color);
+  outline: none;
+  border: none;
+  transition: none;
+}
