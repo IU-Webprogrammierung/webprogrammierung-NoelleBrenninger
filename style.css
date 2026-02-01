@@ -86,7 +86,7 @@ body {
   max-width: var(--max-width);
   margin: 0 auto;
   }
-  #geschichte > header {
+  #geschichte header {
   margin-bottom: 1rem;
   }
 #geschichte h2 {
@@ -112,4 +112,134 @@ body {
   background: var(--primary-bg);
   object-fit: cover;
   min-height: 150px;
+}
+#galerie {
+  padding: 2rem 1rem;
+  background: var(--secondary-bg);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  }
+  #galerie header {
+  margin-bottom: 1rem;
+  }
+  .gallery-grid {
+  display: grid;
+  gap: var(--gutter);
+  grid-template-columns: repeat(4, 1fr);
+  }
+  .gallery-thumb {
+  background: var(--primary-bg);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+}
+.gallery-thumb:focus, .gallery-thumb:hover {
+  outline: 3px solid var(--focus);
+  background: var(--focus);
+}
+#prozess {
+  padding: 2rem 1rem;
+  background: var(--primary-bg);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+#prozess header {
+  margin-bottom: 1rem;
+}
+#prozess h2 {
+  font-size: 1.4rem;
+  color: var(--text);
+}
+.prozess-steps {
+  display: flex;
+  gap: var(--gutter);
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.prozess-card {
+  background: var(--secondary-bg);
+  border: 1px solid #e7ded7;
+  border-radius: var(--border-radius);
+  padding: 0.75em 1.5em;
+  font-weight: bold;
+  font-size: var(--font-size-md);
+  color: var(--text);
+  cursor: pointer;
+}
+.prozess-details {
+  background: var(--primary-bg);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin-top: 0.75rem;
+  font-size: var(--font-size-md);
+}
+.prozess-card:focus,
+.prozess-card[aria-selected="true"] {
+  outline: 3px solid var(--focus);
+  background: var(--focus);
+}
+#kosten-faq {
+  background: var(--primary-bg);
+  padding: 2rem 1rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.kosten-faq-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: var(--gutter);
+}
+.kosten-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-md);
+  background: var(--primary-bg);
+  border-radius: var(--border-radius);
+}
+.kosten-table-wrap th,
+.kosten-table-wrap td {
+  padding: 0.6em;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+.kosten-table-wrap th {
+  background: var(--focus);
+  color: var(--text);
+}
+.faq-accordeon h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.faq-accordeon ul {
+  list-style: none;
+  padding: 0;
+}
+.faq-accordeon li {
+  margin-bottom: 0.75rem;
+}
+.faq-accordeon button {
+  background: var(--focus);
+  color: var(--text);
+  border-radius: var(--border-radius);
+  border: none;
+  width: 100%;
+  padding: 0.5em 1em;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+}
+.faq-accordeon button:focus,
+.faq-accordeon button:hover {
+  outline: 3px solid var(--focus);
+  background: var(--focus);
+  color: var(--accent);
+}
+.faq-accordeon div {
+  background: var(--primary-bg);
+  padding: 0.5em 1em;
+  border-radius: var(--border-radius);
+  margin-top: 0.2em;
 }
