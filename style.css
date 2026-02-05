@@ -366,7 +366,7 @@ img {
     display: block;
 }
 
-@media (max-width: 823px) {
+@media (max-width: 575px) {
   .main-nav {
     flex-direction: column;
     gap: 0.4em;
@@ -399,7 +399,7 @@ img {
   }
 }
 
-@media (min-width: 824px) and (max-width: 1439px) {
+@media (min-width: 576px) and (max-width: 1024px) {
   body {
     font-size: var(--font-size-md);
   }
@@ -414,7 +414,7 @@ img {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1025px) {
   body {
     font-size: var(--font-size-lg);
   }
