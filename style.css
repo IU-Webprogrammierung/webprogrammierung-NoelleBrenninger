@@ -116,6 +116,28 @@ h4 {
     padding: 0;
     gap: var(--space-lg);
 }
+.main-nav li a {
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-medium);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--border-radius-sm);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.main-nav li a:hover,
+.main-nav li a:focus {
+    background-color: var(--color-background-primary);
+     color: var(--color-text-primary);
+     text-decoration: none;
+     outline-color: var(--color-accent-orange);
+}
+.main-nav li:last-child a {
+     background: var(--color-accent-orange);
+     color: var(--color-text-on-dark);
+      padding: var(--space-xs) var(--space-md);
+      border-radius: var(--border-radius-md);
+      font-weight: var(--font-weight-semibold);
+    }
 
 #hero {
     padding: var(---space-xxl);
@@ -140,6 +162,7 @@ h4 {
     justify-content: center;
     align-items: center;
 }
+
 .hero-img-wrap img {
     border-radius: 50%;
     box-shadow: var(--box-shadow-md);
@@ -149,6 +172,7 @@ h4 {
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
+
 .hero-content {
     order: 2;
     text-align: left;
@@ -169,18 +193,33 @@ h4 {
 }
 
 .cta-btn {
-    padding: 0.75em 2em;
-    background: var(--cta-bg);
-    color: var(--cta-color);
-    border-radius: var(--border-radius);
-    font-size: var(--font-size-md);
+    display: inline-block;
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--color-accent-orange);
+    color: var(--color-text-on-dark);
+    border-radius: var(--border-radius-md);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    text-align: center;
+    text-decoration: none;
+    transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+    box-shadow: var(--box-shadow-sm);
+    border: none;
+    cursor: pointer;
 }
 
-.cta-btn :focus,
+.cta-btn :focus {
+    outline: 3px solid var(--color-accent-orange);
+    outline-offset: 3px;
+    background: var(--color-accent-orange-hover);
+    box-shadow: var(--box-shadow-md);
+    text-decoration: none;
+}
+
 .cta-btn :hover {
-    background: var(--focus);
-    color: var(--accent);
-    outline: 4px solid var(--accent);
+    background: var(--color-accent-orange-hover);
+    box-shadow: var(--box-shadow-md);
+    text-decoration: none;
 }
 
 #geschichte {
