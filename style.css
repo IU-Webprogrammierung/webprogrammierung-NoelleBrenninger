@@ -410,41 +410,80 @@ h4 {
 }
 
 #kosten-faq {
-    background: var(--secondary-bg);
-    padding: 2rem 1rem;
-    max-width: var(--max-width);
-    margin: 0 auto;
+    background: var(--color-background-primary);
+}
+
+#kosten-faq header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+#kosten-faq h2 {
+    font-size: var(--font-size-h2);
+    color: var(--color-text-primary);
+    margin-bottom: 0;
 }
 
 .kosten-faq-grid {
     display: grid;
-    grid-template-columns: 1.5fr 2fr;
-    gap: var(--gutter);
+    grid-template-columns: 1.2fr 2fr;
+    gap: var(--space-xl);
+}
+
+.kosten-table-wrap table {
+    background: var(--color-background-secondary);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow-sm);
+    padding: var(--space-lg);
+}
+
+.kosten-table-wrap h3 {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--space-md);
+    color: var(--color-text-primary);
 }
 
 .kosten-table-wrap table {
     width: 100%;
-    border-collapse: collapse;
-    font-size: var(--font-size-md);
-    background: var(--primary-bg);
-    border-radius: var(--border-radius);
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: var(--font-size-base);
+    background: var(--color-background-secondary);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
 }
 
 .kosten-table-wrap th,
 .kosten-table-wrap td {
-    padding: 0.6em;
-    border-bottom: 1px solid var(--border-color);
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--color-border-light);
     text-align: left;
+    color: var(--color-text-primary);
+}
+
+.kosten-table-wrap tbody tr:last-child td {
+    border-bottom: none;
 }
 
 .kosten-table-wrap th {
-    background: var(--focus);
-    color: var(--text);
+    background: var(--color-accent-orange);
+    color: var (--color-text-on-dark);
+    font-weight: var(--font-weight-semibold);
+}
+
+.faq-accordeon {
+    background: var(--color-background-secondary);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow-sm);
+    padding: var(--space-lg);
 }
 
 .faq-accordeon h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--space-md);
+    color: var(--color-text-primary);
 }
 
 .faq-accordeon ul {
@@ -453,69 +492,128 @@ h4 {
 }
 
 .faq-accordeon li {
-    margin-bottom: 0.75rem;
+    margin-bottom: var(--space-xs);
 }
 
 .faq-accordeon button {
-    background: var(--focus);
-    color: var(--text);
-    border-radius: var(--border-radius);
-    border: none;
+    background: var(--color-background-primary);
+    color: var(--color-text-primary);
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--color-border-light);
     width: 100%;
-    padding: 0.5em 1em;
-    font-weight: bold;
+    padding: var(--space-sm) var(--space-md);
+    font-weight: var(--font-weight-medium);
     text-align: left;
     cursor: pointer;
+    transition: background-color var(--transition-speed), border-color var(--transition-speed), box-shadow var(--transition-speed);
+    box-shadow: var(--box-shadow-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--font-size-base);
 }
 
 .faq-accordeon button:focus,
 .faq-accordeon button:hover {
-    outline: 3px solid var(--focus);
-    background: var(--focus);
-    color: var(--accent);
+    background: var(--color-accent-light-orange);
+    border-color: var(--color-accent-orange);
+    color: var(--color-text-primary);
+    box-shadow: var(--box-shadow-md);
+    outline: 3px solid var(--color-accent-orange);
+    outline-offset: 3px;
 }
 
-.faq-accordeon div {
-    background: var(--primary-bg);
-    padding: 0.5em 1em;
-    border-radius: var(--border-radius);
-    margin-top: 0.2em;
+.faq-accordeon div[id^="faq"] {
+    background: var(--color-background-primary);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--border-radius-md);
+    margin-top: var(--space-xxs);
+    border: 1px solid var(--color-border-light);
+    box-shadow: var(--box-shadow-sm);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    display: none;
+    overflow: hidden;
+}
+
+.faq-accordeon button[aria-expanded="true"]+div {
+    display: block;
+}
+
+.faq-accordeon div[id^="faq"] p {
+    margin-bottom: 0;
 }
 
 #naechste-schritte {
-    padding: 2rem 1rem;
-    background: var(--primary-bg);
-    max-width: var(--max-width);
-    margin: 0 auto;
+    background: var(--color-background-dark);
+    color: var(--color-text-on-dark);
+    display: grid;
+    grid-template-columns: [start] minmax(0, var(--max-width-content)) [end];
+    grid-template-areas:
+        "header-area"
+        "text-area"
+        "image-area"
+        "cta-area";
+    justify-content: center;
+    gap: var(--space-lg) 0;
 }
 
 #naechste-schritte header {
-    margin-bottom: 1rem;
+    grid-area: header-area;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+#naechste-schritte header p {
+    color: var(--color-text-on-dark);
+    font-weight: var(--font-weight-medium);
 }
 
 #naechste-schritte h2 {
-    font-size: 1.3rem;
-    color: var(--text);
+    color: var(--color-text-on-dark);
 }
 
-.bildtext-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 2fr;
-    gap: var(--gutter);
+#naechste-schritte .bildtext-grid {
+    display: none;
 }
 
-.bildtext-img img {
+#naechste-schritte .bildtext-text {
+    grid-area: text-area;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+    color: var(--color-text-on-dark);
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+#naechste-schritte .bildtext-text p:last-child {
+    margin-bottom: 0;
+}
+
+#naechste-schritte .bildtext-img {
+    grid-area: image-area;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+#naechste-schritte .bildtext-img img {
     width: 100%;
-    border-radius: var(--border-radius);
+    height: auto;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow-md);
     object-fit: cover;
-    min-height: 120px;
 }
 
-.bildtext-text {
-    font-size: var(--font-size-md);
-    background: var(--secondary-bg);
-    border-radius: var(--border-radius);
-    padding: 1rem;
+#naechste-schritte .cta-btn {
+    grid-area: cta-area;
+    justify-self: center;
+    margin-top: 0;
 }
 
 #kontakt {
