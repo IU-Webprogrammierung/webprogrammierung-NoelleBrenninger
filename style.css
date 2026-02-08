@@ -330,52 +330,83 @@ h4 {
     border-radius: var(--border-radius-lg);
 }
 
-#prozess {
-    padding: 2rem 1rem;
-    background: var(--primary-bg);
-    max-width: var(--max-width);
-    margin: 0 auto;
+#prozess-steps {
+    background: var(--color-background-primary);
 }
 
-#prozess header {
-    margin-bottom: 1rem;
+#prozess-steps header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+#prozess-steps header p {
+    font-size: var(--font-size-md-body);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-xs);
+    font-weight: var(--font-weight-medium);
 }
 
 #prozess h2 {
-    font-size: 1.4rem;
-    color: var(--text);
+    font-size: var(--font-size-h2);
+    color: var(--color-text-primary);
+    margin-bottom: 0;
 }
 
 .prozess-steps {
     display: flex;
-    gap: var(--gutter);
+    gap: var(--space-md);
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-md);
 }
 
 .prozess-card {
-    background: var(--secondary-bg);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    padding: 0.75em 1.5em;
-    font-weight: bold;
-    font-size: var(--font-size-md);
-    color: var(--text);
+    background: var(--color-background-secondary);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-md) var(--space-lg);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
     cursor: pointer;
+    box-shadow: var(--box-shadow-sm);
+    transition: background-color var(--transition-speed), border-color var(--transition-speed), box-shadow var(--transition-speed);
+    flex-grow: 1;
+    text-align: center;
+}
+
+.prozess-card:hover:not([aria-selected="true"]),
+.prozess-card:focus:not([aria-selected="true"]) {
+    border-color: var(--color-accent-light-orange);
+    box-shadow: var(--box-shadow-md);
+    outline: none;
+    transform: translateY(-2px);
+}
+
+.prozess-card[aria-selected="true"] {
+    background: var(--color-accent-orange);
+    color: var(--color-text-primary);
+    border-color: var(--color-accent-orange);
+    box-shadow: var(--box-shadow-md);
+    outline: 3px solid var(--color-accent-orange);
+    outline-offset: 3px;
 }
 
 .prozess-details {
-    background: var(--primary-bg);
-    border-radius: var(--border-radius);
-    padding: 1rem;
-    margin-top: 0.75rem;
-    font-size: var(--font-size-md);
+    background: var(--color-background-secondary);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-lg);
+    margin-top: var(--space-md);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-body);
+    box-shadow: var(--box-shadow-sm);
 }
 
-.prozess-card:focus,
-.prozess-card[aria-selected="true"] {
-    outline: 3px solid var(--focus);
-    background: var(--focus);
+.prozess-details p:last-child {
+    margin-bottom: 0;
+}
+
+.prozess-details:not([id="schritt-1"]) {
+    display: none;
 }
 
 #kosten-faq {
