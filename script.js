@@ -1,5 +1,3 @@
-$("#page-header").load("components/header.component");
-$("#footer").load("components/footer.component");
 $('.faq-accordeon button').on('click', function () {
     const $clickedButton = $(this);
     const targetId = $clickedButton.attr('aria-controls');
