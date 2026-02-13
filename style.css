@@ -482,7 +482,8 @@ section>* {
     padding: var(--space-lg);
 }
 
-.kosten-table-wrap h3 {
+.kosten-table-wrap h3
+    .faq-accordeon h3 {
     font-size: var(--font-size-h3);
     font-weight: var(--font-weight-semibold);
     margin-bottom: var(--space-md);
@@ -517,18 +518,12 @@ section>* {
     font-weight: var(--font-weight-semibold);
 }
 
+.kosten-table-wrap
 .faq-accordeon {
     background: var(--color-background-secondary);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--box-shadow-sm);
     padding: var(--space-lg);
-}
-
-.faq-accordeon h3 {
-    font-size: var(--font-size-h3);
-    font-weight: var(--font-weight-semibold);
-    margin-bottom: var(--space-md);
-    color: var(--color-text-primary);
 }
 
 .faq-accordeon ul {
@@ -541,7 +536,7 @@ section>* {
 }
 
 .faq-accordeon button {
-    background: var(--color-background-primary);
+    background: var(--color-background-secondary);
     color: var(--color-text-primary);
     border-radius: var(--border-radius-md);
     border: 1px solid var(--color-border-light);
@@ -581,7 +576,7 @@ section>* {
 }
 
 .faq-accordeon div[id^="faq"] {
-    background: var(--color-background-primary);
+    background: var(--color-background-secondary);
     padding: var(--space-sm) var(--space-md);
     border-radius: var(--border-radius-md);
     margin-top: var(--space-xxs);
@@ -895,7 +890,6 @@ img {
     .spenden-grid,
     .kosten-faq-grid {
         grid-template-columns: 1fr !important;
-        display: block;
     }
 
     .prozess-steps {
@@ -936,7 +930,7 @@ img {
     .nextsteps-grid,
     .spenden-grid,
     .kosten-faq-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 }
 
