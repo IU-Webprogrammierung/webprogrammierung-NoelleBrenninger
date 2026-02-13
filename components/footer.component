@@ -1,0 +1,15 @@
+<nav aria-label="Footer-Navigation">
+    <ul class="footer-nav">
+        <li>
+            <a href="/datenschutz.html" aria-label="Datenschutzerklärung öffnen Overlay">Datenschutz</a>
+        </li>
+        <li>
+            <a href="/nutzungsbedingungen.html" aria-label="Nutzungsbedingungen öffnen Overlay">Nutzungsbedingungen</a>
+        </li>
+        <li>
+            <a href="/impressum.html" aria-label="Impressum öffnen Overlay">Impressum</a>
+        </li>
+    </ul>
+    <a href="#page-header" class="to-top-link" id="scrolltop" aria-label="Zurück zum Seitenanfang">Zum
+        Seitenanfang ↑</a>
+</nav>

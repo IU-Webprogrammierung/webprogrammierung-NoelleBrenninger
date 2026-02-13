@@ -46,6 +46,12 @@
     --max-width-page: 1440px;
     --max-width-content: 1280px;
 
+    --section-padding-y: var(--space-xxl);
+    --section-padding-x: var(--space-sm);
+
+    --max-width-content: 1440px;
+    --max-width-page: 1920px;
+
     --border-radius-sm: 0.25rem;
     --border-radius-md: 0.5rem;
     --border-radius-lg: 1rem;
@@ -70,6 +76,19 @@ body {
     background: var(--color-background-primary);
     margin: 0;
     line-height: var(--line-height-body);
+}
+
+a {
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+a:hover, a:focus {
+    color: var(--color-accent-orange);
+        text-decoration: underline;
+        outline: 2px solid var(--color-accent-orange);
+          outline-offset: 3px;
 }
 
 h1,
@@ -99,7 +118,25 @@ h4 {
     font-size: var(--font-size-h4);
 }
 
+main > section {
+    max-width: var(--max-width-page);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--section-padding-x);
+    padding-right: var(--section-padding-x);
+    padding-top: var(--section-padding-y);
+    padding-bottom: var(--section-padding-y);
+}
 
+main > section:not(:last-child) {
+    margin-bottom: var(--space-l);
+}
+
+section > * {
+    max-width: var(--max-width-content);
+    margin-left: auto;
+    margin-right: auto;
+}
 
 #page-header {
     background: var(--color-background-secondary);
@@ -140,6 +177,13 @@ h4 {
     padding: var(--space-xs) var(--space-md);
     border-radius: var(--border-radius-lg);
     font-weight: var(--font-weight-semibold);
+}
+
+.main-nav li:last-child a:hover,
+.main-nav li:last-child a:focus {
+    background: var(--color-accent-orange-hover);
+    color: var(--color-text-on-dark);
+    outline-color: var(--color-accent-orange);
 }
 
 #hero {
@@ -807,7 +851,7 @@ h4 {
 .to-top-link:hover {
     background: var(--color-accent-orange-hover);
     box-shadow: var(--box-shadow-lg);
-    transform: translateY(-2px); 
+    transform: translateY(-2px);
 }
 
 .to-top-link:focus {
