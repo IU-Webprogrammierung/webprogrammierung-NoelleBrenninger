@@ -84,11 +84,12 @@ a {
     transition: color var(--transition-speed);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
     color: var(--color-accent-orange);
-        text-decoration: underline;
-        outline: 2px solid var(--color-accent-orange);
-          outline-offset: 3px;
+    text-decoration: underline;
+    outline: 2px solid var(--color-accent-orange);
+    outline-offset: 3px;
 }
 
 h1,
@@ -118,7 +119,7 @@ h4 {
     font-size: var(--font-size-h4);
 }
 
-main > section {
+main>section {
     max-width: var(--max-width-page);
     margin-left: auto;
     margin-right: auto;
@@ -128,11 +129,11 @@ main > section {
     padding-bottom: var(--section-padding-y);
 }
 
-main > section:not(:last-child) {
+main>section:not(:last-child) {
     margin-bottom: var(--space-l);
 }
 
-section > * {
+section>* {
     max-width: var(--max-width-content);
     margin-left: auto;
     margin-right: auto;
@@ -555,6 +556,18 @@ section > * {
     justify-content: space-between;
     align-items: center;
     font-size: var(--font-size-base);
+}
+
+.faq-accordeon button::after {
+    content: '\2304';
+    font-size: var(--font-size-lg-body);
+    margin-left: 10px;
+    transition: transform var(--transition-speed);
+    transform: rotate(0deg);   
+}
+
+.faq-accordeon button[aria-expanded="true"]::after {
+    transform: rotate(180deg);
 }
 
 .faq-accordeon button:focus,
