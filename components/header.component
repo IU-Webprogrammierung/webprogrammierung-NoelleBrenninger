@@ -1,0 +1,9 @@
+<nav aria-label="Hauptnavigation">
+            <ul class="main-nav">
+                <li><a href="#geschichte" aria-label="Zu unserer Geschichte scrollen">Unsere Geschichte</a></li>
+                <li><a href="#prozess" aria-label="Zum Weg zur Adoption scrollen">Der Weg zur Adoption</a></li>
+                <li><a href="#naechste-schritte" aria-label="Infos zur Selbst-Adoption">Selbst adoptieren</a></li>
+                <li><a href="#kosten-faq" aria-label="Kosten & FAQ">Kosten & FAQ</a></li>
+                <li><a href="#spenden" aria-label="Spenden">Spenden</a></li>
+            </ul>
+        </nav>
