@@ -56,9 +56,9 @@
     --border-radius-md: 0.5rem;
     --border-radius-lg: 1rem;
 
-    --box-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-    --box-shadow-md: 0 4px 10px rgba(0, 0, 0, 0.08);
-    --box-shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.1);
+    --box-shadow-sm: 0 1px 3px var(--color-border-light);
+    --box-shadow-md: 0 4px 10px var(var(--color-border-dark)) 
+    --box-shadow-lg: 0 8px 20px var(var(--color-border-dark));
 
     --transition-speed: 0.3s ease;
 }
@@ -450,8 +450,12 @@ section>* {
     margin-bottom: 0;
 }
 
-.prozess-details:not([id="schritt-1"]) {
+.prozess-details {
     display: none;
+}
+
+#schritt-1 {
+    display: block;
 }
 
 #kosten-faq {
@@ -482,8 +486,7 @@ section>* {
     padding: var(--space-lg);
 }
 
-.kosten-table-wrap h3
-    .faq-accordeon h3 {
+.kosten-table-wrap h3 .faq-accordeon h3 {
     font-size: var(--font-size-h3);
     font-weight: var(--font-weight-semibold);
     margin-bottom: var(--space-md);
@@ -518,8 +521,7 @@ section>* {
     font-weight: var(--font-weight-semibold);
 }
 
-.kosten-table-wrap
-.faq-accordeon {
+.kosten-table-wrap .faq-accordeon {
     background: var(--color-background-secondary);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--box-shadow-sm);
@@ -558,7 +560,7 @@ section>* {
     font-size: var(--font-size-lg-body);
     margin-left: 10px;
     transition: transform var(--transition-speed);
-    transform: rotate(0deg);   
+    transform: rotate(0deg);
 }
 
 .faq-accordeon button[aria-expanded="true"]::after {

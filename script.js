@@ -19,3 +19,15 @@ $('.faq-accordeon button').on('click', function () {
         $targetAnswer.slideDown(300);
     }
 });
+
+$('.prozess-steps .prozess-card').on('click', function () {
+    const $clickedTab = $(this);
+    if ($clickedTab.attr('aria-selected') === 'true') {
+        return;
+    }
+    $('.prozess-steps .prozess-card').attr('aria-selected', 'false');
+    $clickedTab.attr('aria-selected', 'true');
+    $('.prozess-details').hide();
+    const targetContentId = '#' + $clickedTab.attr('aria-controls');
+    $(targetContentId).fadeIn(300);
+});
