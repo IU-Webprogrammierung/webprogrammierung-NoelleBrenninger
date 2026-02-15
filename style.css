@@ -1,19 +1,21 @@
 :root {
-    --color-background-primary: #F8F6F1;
-    --color-background-secondary: #FFFFFF;
-    --color-background-dark: #1A202C;
+    --color-background-primary: #f8f6f1;
+    --color-background-secondary: #fcfdff;
+    --color-background-dark: #28395a;
+    --color-background-gradient: linear-gradient(135deg, #f8f6f1 15%, #d4b4015a 90%);
     --color-text-primary: #212529;
-    --color-text-secondary: #6C757D;
-    --color-text-on-dark: #FFFFFF;
+    --color-text-secondary: #6c757d;
+    --color-text-on-dark: #ffffff;
 
-    --color-accent-orange: #F48B21;
-    --color-accent-orange-hover: #E27B1A;
-    --color-accent-light-orange: #FBD38D;
-    --color-paypal-blue: #0070BA;
+    --color-accent-gold: #ddbc01b5;
+    --color-accent-hover: #d8b049;
+    --color-gradient-gold: linear-gradient(100deg, #eacd2b 30%, #b8860b 100%);
+    --color-accent-light-orange: #f8c05f;
+    --color-paypal-blue: #0070ba;
     --color-paypal-blue-hover: #005691;
 
-    --color-border-light: #E5E7EB;
-    --color-border-dark: #A0AEC0;
+    --color-border-light: #e5e7eb;
+    --color-border-dark: #a0aec0;
 
     --font-family-primary: 'Inter', 'Segoe UI', Arial, Helvetica, sans-serif;
     --font-size-base: 1rem;
@@ -85,9 +87,9 @@ a {
 
 a:hover,
 a:focus {
-    color: var(--color-accent-orange);
+    color: var(--color-accent-gold);
     text-decoration: underline;
-    outline: 1px solid var(--color-accent-orange);
+    outline: 1px solid var(--color-accent-gold);
     outline-offset: 3px;
 }
 
@@ -168,12 +170,12 @@ section>* {
     background-color: var(--color-background-primary);
     color: var(--color-text-primary);
     text-decoration: none;
-    outline-color: var(--color-accent-orange);
+    outline-color: var(--color-accent-gold);
 }
 
 .main-nav li:last-child a {
-    background: var(--color-accent-orange);
-    color: var(--color-text-on-dark);
+    background: var(--color-gradient-gold);
+    color: var(--color-text-primary);
     padding: var(--space-xs) var(--space-md);
     border-radius: var(--border-radius-lg);
     font-weight: var(--font-weight-semibold);
@@ -181,15 +183,17 @@ section>* {
 
 .main-nav li:last-child a:hover,
 .main-nav li:last-child a:focus {
-    background: var(--color-accent-orange-hover);
-    color: var(--color-text-on-dark);
-    outline-color: var(--color-accent-orange);
+    background: var(--color-accent-hover);
+    color: var(--color-text-primary);
+    outline-color: var(--color-accent-gold);
 }
 
 #hero {
     padding: var(---space-xxl);
-    background: var(--color-background-primary);
+    background: var(--color-background-gradient);
     padding-bottom: var(--space-xxl);
+    border-bottom-left-radius: var(--border-radius-lg);
+    border-bottom-right-radius: var(--border-radius-lg);
 
 }
 
@@ -242,8 +246,8 @@ section>* {
 .cta-btn {
     display: inline-block;
     padding: var(--space-sm) var(--space-lg);
-    background: var(--color-accent-orange);
-    color: var(--color-text-on-dark);
+    background: var(--color-gradient-gold);
+    color: var(--color-text-primary);
     border-radius: var(--border-radius-lg);
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-semibold);
@@ -257,9 +261,9 @@ section>* {
 
 .cta-btn:focus,
 .cta-btn:hover {
-    background: var(--color-accent-orange-hover);
-    color: var(--color-text-on-dark);
-    outline: 1px solid var(--color-accent-orange);
+    background: var(--color-accent-hover);
+    color: var(--color-text-primary);
+    outline: 1px solid var(--color-accent-gold);
     outline-offset: 3px;
     box-shadow: var(--box-shadow-md);
     text-decoration: none;
@@ -309,7 +313,7 @@ section>* {
 .story-grid .story-img img {
     width: 100%;
     border-radius: var(--border-radius-lg);
-    background: var(--primary-bg);
+    background: var(--color-background-secondary);
     background: transparent;
     object-fit: cover;
     min-height: 250px;
@@ -318,7 +322,7 @@ section>* {
 }
 
 #galerie {
-    background: var(--color-background-primary);
+    background: var(--color-background-secondary);
 }
 
 #galerie header {
@@ -359,7 +363,7 @@ section>* {
 .gallery-thumb:hover {
     box-shadow: var(--box-shadow-md);
     transform: translateY(-2px);
-    outline: 1px solid var(--color-accent-orange);
+    outline: 1px solid var(--color-accent-gold);
     outline-offset: 3px;
 }
 
@@ -416,18 +420,18 @@ section>* {
 
 .prozess-card:hover:not([aria-selected="true"]),
 .prozess-card:focus:not([aria-selected="true"]) {
-    border-color: var(--color-accent-light-orange);
+    border-color: var(--color-accent-light-gold);
     box-shadow: var(--box-shadow-md);
     outline: none;
     transform: translateY(-2px);
 }
 
 .prozess-card[aria-selected="true"] {
-    background: var(--color-accent-orange);
+    background: var(--color-accent-gold);
     color: var(--color-text-primary);
-    border-color: var(--color-accent-orange);
+    border-color: var(--color-accent-gold);
     box-shadow: var(--box-shadow-md);
-    outline: 1px solid var(--color-accent-orange);
+    outline: 1px solid var(--color-accent-gold);
     outline-offset: 3px;
 }
 
@@ -454,7 +458,7 @@ section>* {
 }
 
 #kosten-faq {
-    background: var(--color-background-primary);
+    background: var(--color-background-secondary);
 }
 
 #kosten-faq header {
@@ -475,7 +479,7 @@ section>* {
 }
 
 .kosten-table-wrap table {
-    background: var(--color-background-secondary);
+    background: var(--color-background-primary);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--box-shadow-sm);
     padding: var(--space-lg);
@@ -493,7 +497,7 @@ section>* {
     border-collapse: separate;
     border-spacing: 0;
     font-size: var(--font-size-base);
-    background: var(--color-background-secondary);
+    background: var(--color-background-primary);
     border-radius: var(--border-radius-md);
     overflow: hidden;
 }
@@ -511,13 +515,13 @@ section>* {
 }
 
 .kosten-table-wrap th {
-    background: var(--color-accent-orange);
+    background: var(--color-accent-gold);
     color: var (--color-text-on-dark);
     font-weight: var(--font-weight-semibold);
 }
 
 .kosten-table-wrap .faq-accordeon {
-    background: var(--color-background-secondary);
+    background: var(--color-background-primary);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--box-shadow-sm);
     padding: var(--space-lg);
@@ -533,7 +537,7 @@ section>* {
 }
 
 .faq-accordeon button {
-    background: var(--color-background-secondary);
+    background: var(--color-background-primary);
     color: var(--color-text-primary);
     border-radius: var(--border-radius-md);
     border: 1px solid var(--color-border-light);
@@ -564,11 +568,11 @@ section>* {
 
 .faq-accordeon button:focus,
 .faq-accordeon button:hover {
-    background: var(--color-accent-light-orange);
-    border-color: var(--color-accent-orange);
+    background: var(--color-accent-gold);
+    border-color: var(--color-accent-light-orange);
     color: var(--color-text-primary);
     box-shadow: var(--box-shadow-md);
-    outline: 1px solid var(--color-accent-orange);
+    outline: 1px solid var(--color-accent-gold);
     outline-offset: 3px;
 }
 
@@ -666,7 +670,7 @@ section>* {
 }
 
 #kontakt {
-    background: var(--color-background-primary);
+    background: var(--color-background-secondary);
     text-align: center;
 }
 
@@ -744,9 +748,7 @@ section>* {
 }
 
 #spenden .bildtext-text {
-    background: var(--color-background-secondary);
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--box-shadow-sm);
+    background: var(--color-background-primary);
     padding: var(--space-xl);
     font-size: var(--font-size-base);
     line-height: var(--line-height-body);
@@ -819,26 +821,12 @@ section>* {
     margin-bottom: var(--space-md);
 }
 
-.footer-nav li a {
-    color: var(--color-text-primary);
-    font-weight: var(--font-weight-normal);
-    transition: color var(--transition-speed);
-}
-
-.footer-nav li a:hover,
-.footer-nav li a:focus {
-    color: var(--color-accent-orange);
-    text-decoration: underline;
-    outline: 1px solid var(--color-accent-orange);
-    outline-offset: 3px;
-}
-
 .to-top-link {
     position: fixed;
     right: var(--space-md);
     bottom: var(--space-md);
-    background: var(--color-accent-orange);
-    color: var(--color-text-on-dark);
+    background: var(--color-gradient-gold);
+    color: var(--color-text-primary);
     font-size: var(--font-size-md-body);
     font-weight: var(--font-weight-semibold);
     padding: var(--space-xs) var(--space-md);
@@ -856,11 +844,11 @@ section>* {
 
 .to-top-link:focus,
 .to-top-link:hover {
-    background: var(--color-accent-orange-hover);
+    background: var(--color-accent-hover);
     box-shadow: var(--box-shadow-lg);
     transform: translateY(-2px);
-    color: var(--color-text-on-dark); 
-    outline: 1px solid var(--color-accent-orange-hover);
+    color: var(--color-text-primary);
+    outline: 1px solid var(--color-accent-hover);
     outline-offset: 3px;
     box-shadow: var(--box-shadow-md);
     text-decoration: none;
