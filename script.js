@@ -31,3 +31,14 @@ $('.prozess-steps .prozess-card').on('click', function () {
     const targetContentId = '#' + $clickedTab.attr('aria-controls');
     $(targetContentId).fadeIn(300);
 });
+
+$(function () {
+  const $btn = $('.to-top-link');
+  $(window).on('scroll', function () {
+    if ($(window).scrollTop() > 200) {
+      $btn.addClass('visible');
+    } else {
+      $btn.removeClass('visible');
+    }
+  });
+});
