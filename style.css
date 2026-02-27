@@ -4,7 +4,7 @@
     --color-background-dark: #28395a;
     --color-background-gradient: linear-gradient(135deg, #f8f6f1 15%, #d4b4015a 90%);
     --color-text-primary: #212529;
-    --color-text-secondary: #51585e;
+    --color-text-secondary: #44494f;
     --color-text-on-dark: #ffffff;
 
     --color-accent-gold: #ddbc01b5;
@@ -43,13 +43,7 @@
     --space-xl: 3rem;
     --space-xxl: 4rem;
     --space-xxxl: 6rem;
-    --section-padding-y: var(--space-xxl);
-    --section-padding-x: var(--space-sm) 
-    --max-width-content: 1100px;
-    --max-width-page: 1440px;
-    --max-width-content: 1280px;
-
-    --section-padding-y: var(--space-xxl);
+    --section-padding-y: var(--space-lg);
     --section-padding-x: var(--space-sm);
 
     --max-width-content: 1440px;
@@ -60,7 +54,8 @@
     --border-radius-lg: 1rem;
 
     --box-shadow-sm: 0 1px 3px var(--color-border-light);
-    --box-shadow-md: 0 4px 10px var(var(--color-border-dark)) --box-shadow-lg: 0 8px 20px var(var(--color-border-dark));
+    --box-shadow-md: 0 4px 10px var(--color-border-dark);
+    --box-shadow-lg: 0 8px 20px var(--color-border-dark);
 
     --transition-speed: 0.3s ease;
 }
@@ -132,7 +127,7 @@ main>section {
 }
 
 main>section:not(:last-child) {
-    margin-bottom: var(--space-l);
+    margin-bottom: var(--space-lg);
 }
 
 section>* {
@@ -150,6 +145,7 @@ section>* {
 
 #page-header .main-nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
     list-style: none;
@@ -190,7 +186,7 @@ section>* {
 }
 
 #hero {
-    padding: var(---space-xxl);
+    padding: var(--space-xxl);
     background: var(--color-background-gradient);
     padding-bottom: var(--space-xxl);
     border-bottom-left-radius: var(--border-radius-lg);
@@ -296,9 +292,9 @@ section>* {
 }
 
 .story-grid .story-text {
-    font-size: var(--font-size-base);    
+    font-size: var(--font-size-base);
     border-radius: var(--border-radius-lg);
-    padding: var(--space-lg);  
+    padding: var(--space-lg);
     line-height: var(--line-height-body);
 }
 
@@ -692,10 +688,10 @@ section>* {
 
 #naechste-schritte .cta-btn,
 #spenden .cta-btn {
-     width: auto;
-     align-self: flex-start;
+    width: auto;
+    align-self: flex-start;
     margin-top: var(--space-md);
-     padding-left: var(--space-lg);
+    padding-left: var(--space-lg);
     padding-right: var(--space-lg);
     justify-self: start;
 }
@@ -725,10 +721,11 @@ section>* {
 
 .contact-icons {
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: var(--space-lg);
     padding: 0;
-    margin: var(--space-md) 0 0 0;
+    margin: 0 auto;
 }
 
 .contact-icons a {
@@ -768,7 +765,7 @@ section>* {
 }
 
 #spenden {
-     background: var(--color-background-primary);
+    background: var(--color-background-primary);
     color: var(--color-text-primary);
     padding: var(--space-xxl) var(--space-sm);
     max-width: var(--max-width-page);
@@ -846,7 +843,7 @@ section>* {
     border: none;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     opacity: 0;
     pointer-events: none;
     transition: opacity var(--transition-speed), background-color var(--transition-speed), box-shadow var(--transition-speed), transform var(--transition-speed);
@@ -889,6 +886,11 @@ img {
     .spenden-grid,
     .kosten-faq-grid {
         grid-template-columns: 1fr !important;
+        gap: var(--space-md);
+    }
+
+    #hero .hero-content {
+        text-align: center;
     }
 
     .prozess-steps {
@@ -910,6 +912,13 @@ img {
         font-size: var(--font-size-xs);
         text-align: left;
     }
+
+    #naechste-schritte .bildtext-text,
+    #naechste-schritte .bildtext-img {
+        flex-basis: 100%;
+        min-width: auto;
+        max-width: 100%;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 1024px) {
@@ -917,8 +926,18 @@ img {
         font-size: var(--font-size-md);
     }
 
+    #page-header .main-nav {
+        justify-content: center;
+        gap: var(--space-md);
+    }
+
     .main-nav {
-        font-size: 1.18rem;
+        font-size: 1rem;
+    }
+
+    .main-nav li a {
+        white-space: nowrap;
+        padding: var(--space-xs) var(--space-md);
     }
 
     .gallery-grid {

@@ -11,17 +11,24 @@ l 1025px
 Technologie:
 HTML
 CSS
+Java Script
 
-Geplante Features:
-Mobile Menu mit Hamburger Icon
-Scroll to Top Button mit smooth Scroll
+Features:
+Mobile Menu mit Hamburger Icon (geplant)
+Scroll to Top Button, erscheint erst nach scrollen
 Tabelle
 FAQ-Akkordeon
 visueller Focus für Bedienung mit Keyboard
+Klickbare Cards mit Zusatzinformationen
+PDF-Download
+barrierefreies PDF-Dokument
+Hovereffekte
 
 Werkzeuge:
 Versionierung mit Git und strukturierter Git-Workflow
 Getestet mit Chrome Developer Tools
-Sprachausgabe mit NVDA
+Sprachausgabe mit NVDA und Windows Screenreader überprüft
 Barrierefreiheit mit Google Lighthouse und Wave überprüft
-Ergebnis Lighhouse:  95 Accessiblity 100 Best Practices
+Barrierefreies Dokument mit Adobe Acrobat erstellt und überprüft
+Farbkontraste mit https://contrastchecker.com/ überprüft
+Ergebnis Lighhouse:  95 Performance 95 Accessiblity 100 Best Practices 100 SEO

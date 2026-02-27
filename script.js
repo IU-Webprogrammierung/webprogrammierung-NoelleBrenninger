@@ -25,20 +25,20 @@ $('.prozess-steps .prozess-card').on('click', function () {
     if ($clickedTab.attr('aria-selected') === 'true') {
         return;
     }
-    $('.prozess-steps .prozess-card').attr('aria-selected', 'false');
-    $clickedTab.attr('aria-selected', 'true');
+    $('.prozess-steps .prozess-card').attr('aria-selected', 'false').attr('tabindex', '-1');
+    $clickedTab.attr('aria-selected', 'true').attr('tabindex', '0').focus();
     $('.prozess-details').hide();
     const targetContentId = '#' + $clickedTab.attr('aria-controls');
     $(targetContentId).fadeIn(300);
 });
 
 $(function () {
-  const $btn = $('.to-top-link');
-  $(window).on('scroll', function () {
-    if ($(window).scrollTop() > 200) {
-      $btn.addClass('visible');
-    } else {
-      $btn.removeClass('visible');
-    }
-  });
+    const $btn = $('.to-top-link');
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop() > 200) {
+            $btn.addClass('visible');
+        } else {
+            $btn.removeClass('visible');
+        }
+    });
 });
