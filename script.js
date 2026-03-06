@@ -32,7 +32,6 @@ $('.prozess-steps .prozess-card').on('click', function () {
     $(targetContentId).fadeIn(300);
 });
 
-$(function () {
     const $btn = $('.to-top-link');
     $(window).on('scroll', function () {
         if ($(window).scrollTop() > 200) {
@@ -40,5 +39,4 @@ $(function () {
         } else {
             $btn.removeClass('visible');
         }
-    });
 });
