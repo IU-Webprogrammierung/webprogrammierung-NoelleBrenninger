@@ -14,20 +14,20 @@ CSS
 Java Script
 
 Features:
-Mobile Menu mit Hamburger Icon (geplant)
-Scroll to Top Button, erscheint erst nach scrollen
+Scroll to Top Button, erscheint erst nach scrollen und hat eine smooth-scrolling-Funktion
 Tabelle
-FAQ-Akkordeon
+FAQ-Akkordeon mit Öffnen & Schließen-Funktion
 visueller Focus für Bedienung mit Keyboard
 Klickbare Cards mit Zusatzinformationen
+Bildergalerie mit Modal inkl. Schließen-Button mit Tastatur bedienbar
 PDF-Download
 barrierefreies PDF-Dokument
-Hovereffekte
+Hovereffekte auf CTAs
 
 Werkzeuge:
 Versionierung mit Git und strukturierter Git-Workflow
 Getestet mit Chrome Developer Tools
-Sprachausgabe mit NVDA und Windows Screenreader überprüft
+Sprachausgabe mit Windows Screenreader überprüft
 Barrierefreiheit mit Google Lighthouse und Wave überprüft
 Barrierefreies Dokument mit Adobe Acrobat erstellt und überprüft
 Farbkontraste mit https://contrastchecker.com/ überprüft

@@ -67,15 +67,15 @@
 }
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-  border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
 }
 
 body {
@@ -294,7 +294,7 @@ section>* {
 #geschichte {
     header {
         text-align: center;
-        margin-bottom: var(--space-xl);       
+        margin-bottom: var(--space-xl);
     }
 
 }
@@ -377,12 +377,86 @@ section>* {
     }
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-background-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-speed), visibility var(--transition-speed);
+}
+
+.lightbox-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    background-color: var(--color-background-primary);
+    padding: var(--space-md);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow-lg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    .lightbox-image {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        object-fit: contain;
+    }
+
+    .lightbox-close {
+        position: absolute;
+        top: var(--space-sm);
+        right: var(--space-sm);
+        background-color: var(--color-background-secondary);
+        color: var(--color-text-primary);
+        border: none;
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: var(--font-size-h3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1001;
+        transition: background-color var(--transition-speed), color var(--transition-speed), transform var(--transition-speed);
+
+        &:hover,
+        &:focus {
+            background-color: var(--color-accent-hover);
+            color: var(--color-text-on-dark);
+            transform: rotate(90deg);
+            outline: 3px solid var(--color-accent-gold);
+            outline-offset: 3px;
+        }
+    }
+}
+
 #prozess-steps {
     background: var(--color-background-primary);
 
     header {
         text-align: center;
-        margin-bottom: var(--space-xl);        
+        margin-bottom: var(--space-xl);
     }
 }
 
@@ -413,7 +487,7 @@ section>* {
 
     &:hover:not([aria-selected="true"]),
     &:focus:not([aria-selected="true"]) {
-        border-color: var(--color-accent-light-gold);
+        border-color: var(--color-accent-light-orange);
         box-shadow: var(--box-shadow-md);
         outline: none;
         transform: translateY(-2px);
@@ -652,8 +726,7 @@ section>* {
 #spenden {
     padding: var(--space-xxl) var(--space-sm);
     max-width: var(--max-width-page);
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 #naechste-schritte {
@@ -747,8 +820,6 @@ section>* {
     color: var(--color-text-primary);
     padding: var(--space-xxl) var(--space-sm);
     max-width: var(--max-width-page);
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
 
     header {
