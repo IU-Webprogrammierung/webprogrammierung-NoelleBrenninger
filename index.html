@@ -7,7 +7,7 @@
     <title>Karis Reise</title>
     <meta name="description"
         content="Erlebe Karis Reise vom Shelter in Ägypten nach Wien und erfahre, wie du selbst adoptieren oder helfen kannst. Ein Herz auf 4 Pfoten – Infos, Prozess, FAQ und Spendenaufruf.">
-    <link rel="icon" href="images/favicon.png" alt="favicon Pfote">
+    <link rel="icon" href="images/favicon.png" alt="">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-4.0.0.js"
         integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
@@ -31,10 +31,15 @@
         <section id="hero" aria-label="Karis Adoption Hero">
             <div class="hero-grid">
                 <div class="hero-img-wrap">
-                    <img src="images/hero-kari.png"
-                        alt="Kari, die ägyptische Hündin, ein Golden Retriever, lacht und wirkt glücklich." width="550"
-                        height="310">
+                    <picture>
+                        <source srcset="images/hero-kari-sm.png 400w, images/hero-kari.png 500w"
+                            sizes="(max-width: 400px) 100vw, 400px" type="image/png">
+                        <img src="images/hero-kari.png"
+                            alt="Kari, die ägyptische Hündin, ein Golden Retriever, lacht und wirkt glücklich."
+                            width="500" height="500" loading="eager">
+                            </picture>
                 </div>
+
                 <div class="hero-content">
                     <p>Karis Geschichte</p>
                     <h1>Ein Herz auf 4 Pfoten</h1>
@@ -63,7 +68,7 @@
                         gesamte Kommunikation zwischen dem Shelter und uns.</p>
                 </div>
                 <div class="story-img">
-                    <img src="images/facebook-posting.png" alt="Karis Posting auf Facebook" width="550" height="550">
+                    <img src="/images/facebook-posting.png" alt="Karis Posting auf Facebook" width="550" height="550">
                 </div>
                 <div class="story-text">
                     <p>Nun startete die Suche nach
@@ -79,7 +84,7 @@
                 <div class="story-img">
                     <img src="/images/karis-anreise.jpg"
                         alt="Der Weg vom Shelter nach Österreich. Kari sitzt in der Transportbox." width="550"
-                        height="550">
+                        height="550" loading="lazy">
                 </div>
                 <div class="story-text">
                     <p>Alles wurde in enger Abstimmung mit Sabine organisiert. Nach meiner Landung brachte mich jemand
@@ -100,7 +105,7 @@
                 </div>
                 <div class="story-img">
                     <img src="/images/kari-ankunft.jpg" alt="Kari liegt erschöpft in ihrem Bett." width="550"
-                        height="550">
+                        height="550" loading="lazy">
                 </div>
             </div>
         </article>
@@ -109,41 +114,42 @@
             <header>
                 <h2>Bildergalerie</h2>
             </header>
-            <div class="gallery-grid" role="list">
+            <div class="gallery-grid">
                 <button type="button" class="gallery-thumb" aria-label="Bild 1 vergrößern (Overlay öffnet sich)">
                     <img src="/images/shelter.jpg" alt="Kari als Junghund im Shelter in Ägypten" width="200"
-                        height="150">
+                        height="150" loading="lazy">
                 </button>
                 <button type="button" class="gallery-thumb" aria-label="Bild 2 vergrößern (Overlay öffnet sich)">
                     <img src="/images/kuscheltier.jpg"
                         alt="Sie spielt mit ihrem ersten Kuscheltier kurz nach der Ankunft in Österreich." width="200"
-                        height="150">
+                        height="150" loading="lazy">
                 </button>
                 <button type="button" class="gallery-thumb" aria-label="Bild 3 vergrößern (Overlay öffnet sich)">
                     <img src="/images/ausflug-burg.jpg"
                         alt="Karis erster Ausflug nach Mödling zu einer Burg. Sie sitzt in der Wiese vor der Burg."
-                        width="200" height="150">
+                        width="200" height="150" loading="lazy">
                 </button>
                 <button type="button" class="gallery-thumb" aria-label="Bild 4 vergrößern (Overlay öffnet sich)">
                     <img src="/images/trichter.jpg"
                         alt="Kari mit Trichter, kurz nach dem ersten Klinikaufenthalt, schaut etwas unglücklich."
-                        width="200" height="150">
+                        width="200" height="150" loading="lazy">
                 </button>
                 <button type="button" class="gallery-thumb" aria-label="Bild 5 vergrößern (Overlay öffnet sich)">
-                    <img src="/images/unterwegs.jpg" alt="Kari schläft gerne im Van." width="200" height="150">
+                    <img src="/images/unterwegs.jpg" alt="Kari schläft gerne im Van." width="200" height="150"
+                        loading="lazy">
                 </button>
                 <button type="button" class="gallery-thumb" aria-label="Bild 6 vergrößern (Overlay öffnet sich)">
                     <img src="/images/jesolo.jpg" alt="Karis erster Strandbesuch in Jesolo. Sie hat Sand auf der Nase."
-                        width="200" height="150">
+                        width="200" height="150" loading="lazy">
                 </button>
                 <button type="button" class="gallery-thumb" aria-label="Bild 7 vergrößern (Overlay öffnet sich)">
                     <img src="/images/buero.jpg" alt="Kari sitzt im Büro mit ihrem Buddy Koko, einem schwarzen Mix."
-                        width="200" height="150">
+                        width="200" height="150" loading="lazy">
                 </button>
                 <button type="button" class="gallery-thumb" aria-label="Bild 8 vergrößern (Overlay öffnet sich)">
                     <img src="/images/berge.jpg"
                         alt="Ich, mein Partner und Kari in den Bergen auf einer grünen Wiese und einem See im Hintergrund."
-                        width="200" height="150">
+                        width="200" height="150" loading="lazy">
                 </button>
             </div>
         </section>
@@ -384,7 +390,7 @@
                 <div class="bildtext-img">
                     <img src="/images/muede.jpg"
                         alt="Kari liegt müde in ihrem Bett, ihr zerfetztes Lama-Kuscheltier liegt vor ihr." width="320"
-                        height="200">
+                        height="200" loading="lazy">
                 </div>
             </div>
         </section>
@@ -429,7 +435,7 @@
                 </div>
                 <div class="bildtext-img">
                     <img src="/images/bitte.jpg" alt="Kari blickt bittend in die Kamera und pfötelt." width="320"
-                        height="200">
+                        height="200" loading="lazy">
                 </div>
             </div>
         </article>

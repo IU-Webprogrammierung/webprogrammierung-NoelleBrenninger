@@ -23,6 +23,8 @@ Bildergalerie mit Modal inkl. Schließen-Button mit Tastatur bedienbar
 PDF-Download
 barrierefreies PDF-Dokument
 Hovereffekte auf CTAs
+Bilder komprimiert und mit lazy loading performanter gemacht
+Fokusnavigation mit Pfeiltasten bei "Adoptionsprozess"
 
 Werkzeuge:
 Versionierung mit Git und strukturierter Git-Workflow
